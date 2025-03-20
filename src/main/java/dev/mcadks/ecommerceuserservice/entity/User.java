@@ -1,6 +1,7 @@
 package dev.mcadks.ecommerceuserservice.entity;
 
 public interface User {
+    public String id = "";
     public String password = "";
 
     String getId();
