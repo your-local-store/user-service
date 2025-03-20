@@ -1,6 +1,11 @@
 package dev.mcadks.ecommerceuserservice.entity;
 
+import org.bson.codecs.pojo.annotations.BsonId;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class UserEntity implements User {
+    @BsonId
     private String id;
     private String password;
 
