@@ -1,12 +1,13 @@
 package dev.mcadks.ecommerceuserservice.entity;
 
+import java.math.BigInteger;
+
 public interface User {
-    public String id = "";
-    public String password = "";
+    public BigInteger getId();
+    public String getUsername();
+    public String getPassword();
 
-    String getId();
-    String getPassword();
-
-    void setId(String id);
-    void setPassword(String password);
+    public void setId(BigInteger userId);
+    public void setUsername(String username);
+    public void setPassword(String password);
 }

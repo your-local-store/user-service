@@ -1,47 +1,22 @@
 package dev.mcadks.ecommerceuserservice.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.bson.codecs.pojo.annotations.BsonId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigInteger;
+
 @Document
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class UserEntity implements User {
     @BsonId
-    private String id;
+    private BigInteger id;
+
+    private String username;
     private String password;
-
-    /*
-    * NoArgConstructor
-    * */
-    public UserEntity() {}
-
-    /*
-    * AllArgConstructor
-    * */
-    public UserEntity(String id, String password) {}
-
-    /*
-    * Getters
-    * */
-    @Override
-    public String getId() {
-        return this.id;
-    }
-
-    @Override
-    public String getPassword() {
-        return this.password;
-    }
-
-    /*
-    * Setters
-    * */
-    @Override
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    @Override
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }
