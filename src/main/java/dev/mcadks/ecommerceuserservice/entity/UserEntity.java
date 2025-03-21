@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigInteger;
 
-@Document
+@Document(collection = "users")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
